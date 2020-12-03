@@ -28,6 +28,8 @@ This means that data may have to be adjusted. (See setupdb.py for apple's table 
 
 ## Examples
 ![](examples/apple_plot_example.png)
+
+
 ![](examples/apple_terminal_example.png)
 
 ## Disclaimer 
