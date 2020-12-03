@@ -2,7 +2,7 @@
 
 ## Overview
 Get daily data from AlphaVantage and IEXCloud public apis about stocks, indexes etc.. 
-Create candlestick plot with data. 
+Create candlestick plot with macd from data. 
 Daily data is stored in sqlite3 db.
 
 ## How to use 
