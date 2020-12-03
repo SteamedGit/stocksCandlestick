@@ -22,12 +22,12 @@ In theory any stock available from AlphaVantage and IEXCloud should be easy to a
 All the common requirements for updating, getting data and plotting is contained in the stock class. 
 apple.py, microsoft.py or snp500.py are examples of how to use the stock class.
 
-###Potential issue with adding stocks
+### Potential issue with adding stocks
 Some stocks have undergone stock splits or other such disruptions, whilst AlphaVantage provides adjusted closing prices, the other values are unadjusted. 
 This means that data may have to be adjusted. (See setupdb.py for apple's table in the db)
 
-##Examples
+## Examples
 
-##Disclaimer 
+## Disclaimer 
 This is intended for non-commerical use.
 Data attributed to AlphaVantage and IEXCloud.
