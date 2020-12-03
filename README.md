@@ -14,10 +14,10 @@ Running apple.py, microsoft.py or snp500.py in src will update its data, print o
 
 ## How to add other stocks
 In theory any stock available from AlphaVantage and IEXCloud should be easy to add, you need:
-  -A stock name for display purposes
-  -An all uppercase stock symbol(eg. AAPL)
-  -A database table for the stock, can be achieved by adding to setupdb.py or manually adding it to the db.
-  -A python program that creates a stock object and uses its methods.
+  * A stock name for display purposes
+  * An all uppercase stock symbol(eg. AAPL)
+  * A database table for the stock, can be achieved by adding to setupdb.py or manually adding it to the db.
+  * A python program that creates a stock object and uses its methods.
 
 All the common requirements for updating, getting data and plotting is contained in the stock class. 
 apple.py, microsoft.py or snp500.py are examples of how to use the stock class.
