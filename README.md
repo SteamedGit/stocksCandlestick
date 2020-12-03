@@ -27,6 +27,8 @@ Some stocks have undergone stock splits or other such disruptions, whilst AlphaV
 This means that data may have to be adjusted. (See setupdb.py for apple's table in the db)
 
 ## Examples
+![](examples/apple_plot_example.png)
+![](examples/apple_terminal_example.png)
 
 ## Disclaimer 
 This is intended for non-commerical use.
