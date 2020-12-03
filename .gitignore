@@ -1,0 +1,7 @@
+Legacy/
+*.db
+stocks_env/
+test.py
+**/__pycache__
+exchange.py
+
