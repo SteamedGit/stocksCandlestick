@@ -6,11 +6,11 @@ Create candlestick plot with data.
 Daily data is stored in sqlite3 db.
 
 ## How to use 
-Install packages listed in requirement.txt (some kind of virtual environment recommended)
-Create /db in base dir. 
-Run the setupdb.py to create a sqlite database with tables for apple, microsoft and snp500 etf.(last 100 days of data) 
-Database will be in /db.
-Running apple.py, microsoft.py or snp500.py in src will update its data, print out last daily entry and print latest data about stock sale price from IEXCloud.
+* Install packages listed in requirement.txt (some kind of virtual environment recommended)
+* Create /db in base dir. 
+* Run the setupdb.py to create a sqlite database with tables for apple, microsoft and snp500 etf.(last 100 days of data) 
+* Database will be in /db.
+* Running apple.py, microsoft.py or snp500.py in src will update its data, print out last daily entry and print latest data about stock sale price from IEXCloud.
 
 ## How to add other stocks
 In theory any stock available from AlphaVantage and IEXCloud should be easy to add, you need:
