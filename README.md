@@ -32,6 +32,10 @@ This means that data may have to be adjusted. (See setupdb.py for apple's table 
 
 ![](examples/apple_terminal_example.png)
 
+## OS Support
+Paths in the examples apple.py etc... are for a linux filesystem.
+Adjust for your own OS accordingly.
+
 ## Disclaimer 
 This is intended for non-commerical use.
 Data attributed to AlphaVantage and IEXCloud.
