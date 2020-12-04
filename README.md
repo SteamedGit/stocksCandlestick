@@ -19,9 +19,11 @@ In theory any stock available from AlphaVantage and IEXCloud should be easy to a
   ``` 
   some_stock = stock(<stock_name>, <stock_symbol>, <stock_table_name_in_db>) 
   ```
-  For example: ``` apple = stock("Apple", "AAPL", "apple_daily_adjusted")
-                   apple.getLatestLiveData() 
-               ```
+  For example: 
+  ``` 
+  apple = stock("Apple", "AAPL", "apple_daily_adjusted")
+  apple.getLatestLiveData() 
+  ```
   
 
 All the common requirements for updating, getting data and plotting is contained in the stock class. 
