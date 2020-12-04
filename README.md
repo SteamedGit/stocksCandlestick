@@ -6,7 +6,7 @@ Create candlestick plot with macd from data.
 Daily data is stored in sqlite3 database.
 
 ## How to use 
-* Install packages listed in requirement.txt
+* Install packages listed in requirements.txt
 * Create /db in base dir. 
 * Run the setupdb.py to create a sqlite database with tables for apple, microsoft and snp500 etf.(last 100 days of data) 
 * Database will be in /db.
