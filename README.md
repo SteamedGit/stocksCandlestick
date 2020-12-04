@@ -29,7 +29,7 @@ Updating, getting data and plotting are done via the stock class and apple.py, m
 
 ### Potential issue with adding stocks
 Some stocks have undergone stock splits or other such disruptions, whilst AlphaVantage provides adjusted closing prices, the other values are unadjusted. 
-This means that data may have to be adjusted. (See setupdb.py for apple's table in the db)
+This means that data may have to be adjusted. (See setupdb.py for how Apple's data had to be adjusted due to a recent stock split.)
 
 ## Examples
 ![](examples/apple_plot_example.png)
