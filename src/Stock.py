@@ -115,7 +115,9 @@ class stock:
         todayVolume = int(df.iloc[-1][4])
 
         print(
-            f"{self.stockName} Daily: {todayDate} Open {todayOpen} Close {todayClose} High {todayHigh} Low {todayLow} Volume {todayVolume}"
+            f"{self.stockName} Daily: {todayDate} Open {round(todayOpen,3)} "
+            f"Close {round(todayClose,3)} High {round(todayHigh,3)} Low {round(todayLow,3)} "
+            f"Volume {round(todayVolume,3)}"
         )
 
         # Create candlestick plot with daily volume and a corresponding macd + signal plot
@@ -144,7 +146,10 @@ class stock:
         raw = c.fetchall()
         if len(raw) > 0:
             row = raw[0]
-            return f"Date: {row[0][:10]} Open: {row[1]} Close: {row[2]} High: {row[3]} Low: {row[4]} Volume: {row[5]}"
+            return (
+                f"Date: {row[0][:10]} Open: {round(row[1],3)} Close: {round(row[2],3)} "
+                f"High: {round(row[3],3)} Low: {round(row[4],3)} Volume: {round(row[5],3)}"
+            )
 
         else:
             print(
@@ -161,7 +166,7 @@ class stock:
             )
             toData = c.fetchone()
             fromData = c.fetchone()
-            change = (toData[1] - fromData[1]) / fromData[1] * 100
+            change = round((toData[1] - fromData[1]) / fromData[1] * 100, 3)
             return f"Percentage change from {fromData[0][:10]} to {toData[0][:10]} is {change}% "
         else:
             # Get first and last entry in db so we can check that date range is in db date range
@@ -188,7 +193,7 @@ class stock:
                     f"SELECT date, close FROM {self.tableName} WHERE date > '{fromDate}' AND date <= '{toDate}' ORDER BY date DESC LIMIT 1"
                 )
                 toClose = c.fetchone()
-                change = (toClose[1] - fromClose[1]) / fromClose[1] * 100
+                change = round((toClose[1] - fromClose[1]) / fromClose[1] * 100, 3)
                 return f"Percentage change from {fromClose[0][:10]} to {toClose[0][:10]} is {change}%"
             else:
                 print("Out of range of stored dates.")
