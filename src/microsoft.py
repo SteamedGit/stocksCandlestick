@@ -10,4 +10,5 @@ with conn:
     microsoft = stock("Microsoft", "MSFT", "microsoft_daily_adjusted")
     microsoft.update(conn, c)
     microsoft.getLatestLiveData()
+    print(microsoft.getPercentageChange(c))
     microsoft.candlestickDaily(conn)

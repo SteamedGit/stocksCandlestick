@@ -11,4 +11,5 @@ with conn:
     apple = stock("Apple", "AAPL", "apple_daily_adjusted")
     apple.update(conn, c)
     apple.getLatestLiveData()
+    print(apple.getPercentageChange(c))
     apple.candlestickDaily(conn)
