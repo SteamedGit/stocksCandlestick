@@ -1,7 +1,7 @@
 # stocksCandlestick
 
 ## Overview
-Store, plot and do calculations with data about stocks/indexes from AlphaVantage and IEXCloud public apis. Daily data from AlphaVantage stored in sqlite3 database. Live data from IEXCloud is not stored. Create candlestick plots with macd from data. Calculate percentage change over specified intervals. Search for data corresponding to specific dates stored in database.
+Store, plot and do calculations with data about stocks/indexes from AlphaVantage and IEXCloud public apis. Daily data from AlphaVantage stored in a Sqlite3 database. Live data from IEXCloud is not stored. Create candlestick plots with macd from daily data. Calculate percentage change over specified intervals. Search for data corresponding to specific dates stored in database.
 
 
 ## How to use 
