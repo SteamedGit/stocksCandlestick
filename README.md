@@ -1,14 +1,13 @@
 # stocksCandlestick
 
 ## Overview
-Get data from AlphaVantage and IEXCloud public apis about stocks, indexes etc.. 
-Create candlestick plot with macd from data. 
-Daily data is stored in sqlite3 database.
+Store, plot and do calculations with data about stocks/indexes from AlphaVantage and IEXCloud public apis. Daily data from AlphaVantage stored in sqlite3 database. Live data from IEXCloud is not stored. Create candlestick plots with macd from data. Calculate percentage change over specified intervals. Search for data corresponding to specific dates stored in database.
+
 
 ## How to use 
 * Install packages listed in requirements.txt
 * Create /db in base dir. 
-* Run the setupdb.py to create a sqlite database with tables for apple, microsoft and snp500 etf.(last 100 days of data) 
+* Run the setupdb.py to create a sqlite database with tables for apple, microsoft and snp500 etf. (Last 100 days of data for simplicity sake. Larger sets of data are more likely to require adjustments.) 
 * Database will be in /db.
 * Running apple.py, microsoft.py or snp500.py in src will update its data, print out last daily entry and print latest data about stock sale price from IEXCloud.
 
