@@ -128,3 +128,12 @@ class stock:
         axo = ax2.overlay()
         fplt.volume_ocv(df[["Open", "Close", "Volume"]], ax=axo)
         fplt.show()
+
+    """ Gets the table entry corresponding to a string date in the form %Y-%m-%d"""
+
+    def getDay(self, c, date):
+        date += " 00:00:00"
+        date = str(pd.to_datetime(date))
+        c.execute(f"SELECT * FROM {self.tableName} WHERE date='{date}'")
+        row = c.fetchall()[0]
+        return f"Date: {row[0][0:10]} Open: {row[1]} Close: {row[2]} High: {row[3]} Low: {row[4]} Volume: {row[5]}"
