@@ -14,8 +14,8 @@ Daily data is stored in sqlite3 db.
 
 ## How to add other stocks
 In theory any stock available from AlphaVantage and IEXCloud should be easy to add, you need:
-  * A stock name for display purposes
-  * An all uppercase stock symbol(eg. AAPL)
+  * A stock object, for example:
+  ``` apple = stock("Apple", "AAPL", "apple_daily_adjusted") ```
   * A database table for the stock, can be achieved by adding to setupdb.py or manually adding it to the db.
   * A python program that creates a stock object and uses its methods.
 
