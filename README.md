@@ -5,6 +5,7 @@ Store, plot and do calculations with data about stocks/indexes from AlphaVantage
 
 
 ## How to use 
+* Get api keys from AlphaVantage and IEXCloud
 * Install packages listed in requirements.txt
 * Create /db in base dir. 
 * Run the setupdb.py to create a sqlite database with tables for apple, microsoft and snp500 etf. (Last 100 days of data for simplicity sake. Larger sets of data are more likely to require adjustments.) 
