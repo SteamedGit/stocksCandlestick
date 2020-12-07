@@ -167,6 +167,8 @@ class stock:
             toData = c.fetchone()
             fromData = c.fetchone()
             change = round((toData[1] - fromData[1]) / fromData[1] * 100, 3)
+            if change > 0:
+                change = "+" + str(change)
             return f"Percentage change from {fromData[0][:10]} to {toData[0][:10]} is {change}% "
         else:
             # Get first and last entry in db so we can check that date range is in db date range
@@ -194,6 +196,8 @@ class stock:
                 )
                 toClose = c.fetchone()
                 change = round((toClose[1] - fromClose[1]) / fromClose[1] * 100, 3)
+                if change > 0:
+                    change = "+" + str(change)
                 return f"Percentage change from {fromClose[0][:10]} to {toClose[0][:10]} is {change}%"
             else:
                 print("Out of range of stored dates.")
