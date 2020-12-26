@@ -85,14 +85,21 @@ class stock:
             self.IEX + self.IEX_API + "&" + "symbols=" + self.stockSymbol.lower()
         )
 
-        IEXData = rIEX.json()[0]
+        IEXData = rIEX.json()
+        if IEXData:
+            IEXData = IEXData[0]
+            stockUpdated = datetime.fromtimestamp(
+                IEXData["lastUpdated"] / 1000
+            ).strftime("%Y-%m-%d %H:%M:%S")
 
-        stockUpdated = datetime.fromtimestamp(IEXData["lastUpdated"] / 1000).strftime(
-            "%Y-%m-%d %H:%M:%S"
-        )
-
-        latestStock = IEXData["lastSalePrice"]
-        print(f"{self.stockName} Latest: {stockUpdated} Last Sale Price {latestStock} ")
+            latestStock = IEXData["lastSalePrice"]
+            print(
+                f"{self.stockName} Latest: {stockUpdated} Last Sale Price {latestStock} "
+            )
+        else:
+            print(f"{self.stockName} has no live data.")
+        # IEXData = rIEX.json()
+        # print(IEXData)
 
     """ Prints the latest daily entry and creates a candlestick plot with macd and volume."""
 
